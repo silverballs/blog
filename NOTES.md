@@ -14,4 +14,21 @@ for crud
 
 6. create views/posts/new.html.erb file
 
-7.  
+7.  add form to above page:
+<!-- 
+<%= form_for :posts do |f| %>
+	<p>
+		<%= f.label :title%><br>
+		<%= f.text_field :title%>
+	</p>
+	<p>
+		<%= f.label :text%><br>
+		<%= f.text_field :text%>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %> -->
+
+
