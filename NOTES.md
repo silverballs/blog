@@ -36,3 +36,26 @@ for crud
 9. def a create action in posts controller and place the following in the definition:
 render text: params[:post].inspect
 
+10.  in terminal do rails g model Post title:string text:text and run rake db:migrate
+
+In order to save data in the controller change posts_controller to this:
+class PostsController < ApplicationController
+
+def new
+end
+
+def create
+	@post = Post.new(post_params)
+	@post.save
+	redirect_to @post
+end
+
+private 
+
+	def post_params
+		params.require.(:post).permit(:title, :text)
+	end
+
+end
+
+
