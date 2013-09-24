@@ -31,4 +31,8 @@ for crud
 	</p>
 <% end %> -->
 
+8. make the above form's first line <%= form_for :posts, url: posts_path  do |f| %>
+
+9. def a create action in posts controller and place the following in the definition:
+render text: params[:post].inspect
 
